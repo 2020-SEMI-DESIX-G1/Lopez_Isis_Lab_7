@@ -1,0 +1,38 @@
+{
+    "name": "lab7",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "mongo:start": "docker run --rm -p=27017:27017 --env-file=./.env --name=lab7--mongo -d centos/mongodb-32-centos7",
+        "mongo:stop": "docker stop lab7--mongo",
+        "dev": "npm run mongo:start && nodemon app.js",
+        "start": " nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "aws-sdk": "^2.725.0",
+        "bcrypt": "^5.0.0",
+        "body-parser": "^1.19.0",
+        "braintree": "^2.23.0",
+        "cookie-parser": "^1.4.5",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.3",
+        "express": "^4.17.1",
+        "express-form-data": "^2.0.14",
+        "express-hbs": "^2.3.4",
+        "jsonwebtoken": "^8.5.1",
+        "jwt-simple": "^0.5.6",
+        "moment": "^2.27.0",
+        "mongodb": "^3.5.9",
+        "mongoose": "^5.9.26",
+        "mongoose-unique-validator": "^2.0.3",
+        "paypal-rest-sdk": "^1.8.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
